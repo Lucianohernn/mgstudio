@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}MG Studio{% endblock %}
+
+{% block content %}
+
+<section class="text-center py-5">
+    <h1 class="display-4">MG Studio</h1>
+
+    <p class="lead">
+        Reserva tu turno online de forma rapida y sencilla
+    </p>
+</section>
+
+<!-- CARRUSEL -->
+
+<section class="mb-5">
+
+    <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/servicio1.jpg') }}"
+                    class="d-block w-100" 
+                    alt="Servicio 1">
+            </div>
+
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/servicio2.jpg') }}"
+                    class="d-block w-100" 
+                    alt="Servicio 2">
+            </div>
+
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/servicio3.jpg') }}"
+                    class="d-block w-100" 
+                    alt="Servicio 3">
+            </div>
+
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/servicio4.jpg') }}"
+                    class="d-block w-100" 
+                    alt="Servicio 4">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselServicios"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselServicios"
+                data-bs-slide="next"
+
+                <span class="carousel-control-next-icon"></span>
+        ></button>
+
+    </div>
+
+</section>
+
+<!-- BLOQUE RESERVA -->
+ <section>
+
+    <h2 class="mb-4">Reservar Turno</h2>
+
+    <form>
+
+        <div class="mb-3">
+            <label class="form-label">Nombre y Apellido</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">DNI</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Telefono</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Servicio</label>
+                <option>Peluqueria</option>
+                <option>Manicuria</option>
+                <option>Pedicuria</option>
+        </div>
+
+        <button class="btn btn-dark w-100">
+            Reservar Turno
+        </button>
+
+    </form>
+
+ </section>
+
+{% endblock %}
