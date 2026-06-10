@@ -53,6 +53,22 @@ CREATE TABLE IF NOT EXISTS configuracion (
 )
 """)
 
+
+#tabla administrador
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS administradores (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL
+)
+""")
+
+cursor.execute("""
+INSERT OR IGNORE INTO administradores (usuario, password)
+VALUES ('admin', '1234')
+""")
+
 conexion.commit()
 conexion.close()
 
