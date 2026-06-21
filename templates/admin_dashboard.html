@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel Administrador{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">
+    Panel de Administración
+</h1>
+
+<div class="row">
+
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+
+                <h5>Clientes</h5>
+
+                <p>
+                    Gestionar clientes habilitados.
+                </p>
+
+                <a href="/admin/clientes"
+                   class="btn btn-dark">
+                    Ingresar
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+
+                <h5>Turnos</h5>
+
+                <p>
+                    Ver reservas.
+                </p>
+
+                <button class="btn btn-secondary">
+                    Próximamente
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

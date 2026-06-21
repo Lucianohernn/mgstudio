@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">
+    Clientes
+</h1>
+
+<a href="/admin/clientes/nuevo"
+   class="btn btn-success mb-3">
+    + Nuevo Cliente
+</a>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for cliente in clientes %}
+
+        <tr>
+            <td>{{ cliente[0] }}</td>
+            <td>{{ cliente[1] }}</td>
+            <td>{{ cliente[2] }}</td>
+            <td>{{ cliente[3] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}
